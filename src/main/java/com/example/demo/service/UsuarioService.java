@@ -35,8 +35,8 @@ public class UsuarioService  {
         return users;
     }
 
-    public  UsuarioModel guardarUsuario(UsuarioModel nuevoUsuario){
-        return usuarioRepository.save(nuevoUsuario);
+    public void guardarUsuario(UsuarioModel nuevoUsuario){
+        usuarioRepository.insertUsuario(nuevoUsuario.getPassword(), nuevoUsuario.getUserName());
     }
 
 }

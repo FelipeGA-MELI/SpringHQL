@@ -23,12 +23,8 @@ public class UsuarioController {
         return usuarioService.obtenerUsuariosPorNombre2(name);
     }
 
-
     @PostMapping
-    public UsuarioModel guardarUsuario(@RequestBody UsuarioModel usuarioModel){
-        return this.usuarioService.guardarUsuario(usuarioModel);
-
+    public void guardarUsuario(@RequestBody UsuarioModel usuarioModel){
+        this.usuarioService.guardarUsuario(usuarioModel);
     }
-
-
 }
